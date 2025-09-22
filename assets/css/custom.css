@@ -1,0 +1,50 @@
+/* custom overrides + small styling */
+:root {
+  --primary: #3366ff;
+}
+
+body {
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+  background: #f7f8fb;
+}
+
+/* hero */
+.hero-section {
+  background: linear-gradient(
+    90deg,
+    rgba(227, 242, 253, 0.6),
+    rgba(252, 228, 236, 0.6)
+  );
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.profile-img {
+  max-width: 420px;
+}
+
+/* project card hover */
+.project-card {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* small tweaks for navbar links active state */
+.navbar .nav-link.active {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* responsive: reduce container padding on small screens */
+@media (max-width: 576px) {
+  .hero-section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .profile-img {
+    max-width: 260px;
+  }
+}
